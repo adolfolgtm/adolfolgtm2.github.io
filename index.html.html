@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Granja de Gallinas Felices</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #fff8f0;
+      color: #333;
+    }
+    header {
+      background-color: #d97706;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      animation: moveTitle 6s linear infinite alternate;
+    }
+    @keyframes moveTitle {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(20px); }
+      100% { transform: translateX(0); }
+    }
+    nav {
+      background-color: #fbbf24;
+      padding: 12px 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #5a3001;
+      font-weight: bold;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+    nav a:hover, nav a:focus {
+      color: #b85a02;
+      outline: none;
+    }
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      line-height: 1.6;
+    }
+    h2 {
+      color: #92400e;
+      border-bottom: 3px solid #d97706;
+      padding-bottom: 8px;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+    h3 {
+      color: #b85a02;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    .productos, .tipos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .producto, .tipo {
+      background-color: #fff;
+      border: 1px solid #eee;
+      padding: 20px;
+      flex: 1 1 300px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      border-radius: 8px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    form button {
+      background-color: #d97706;
+      color: white;
+      padding: 12px 28px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+    form button:hover {
+      background-color: #b85a02;
+    }
+    footer {
+      background-color: #fbbf24;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #5a3001;
+      font-weight: 600;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+    iframe {
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    }
+    .subsection {
+      margin-bottom: 40px;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 8px 0;
+      }
+      .productos, .tipos {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Granja de Gallinas Felices</h1>
+    <p>Huevos frescos, gallinas sanas y mucho amor</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#sobre">Sobre Nosotros</a>
+    <a href="#tipos">Tipos de Gallinas</a>
+    <a href="#productos">Productos</a>
+    <a href="#curiosidades">Curiosidades</a>
+    <a href="#cuidados">Cuidados</a>
+    <a href="#salud">Salud</a>
+    <a href="#blog">Blog</a>
+    <a href="#galeria">Galería</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos</h2>
+    <p>Te damos la bienvenida a nuestra granja dedicada al cuidado responsable y amoroso de gallinas ponedoras. Aquí encontrarás información útil, productos frescos, consejos para el cuidado de tus aves y mucho más. Nuestra misión es ofrecer productos de calidad y educar a quienes aman criar gallinas en casa, promoviendo prácticas sostenibles y respetuosas con el medio ambiente.</p>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos una granja familiar con más de 20 años de experiencia en la cría de gallinas en libertad. Amamos a nuestros animales y nos dedicamos a proveerles un entorno saludable y natural. Nuestro compromiso se basa en:</p>
+    <ul>
+      <li>Alimentación 100% natural y libre de químicos.</li>
+      <li>Producción de huevos orgánicos certificados.</li>
+      <li>Prácticas de bienestar animal, evitando el estrés y el confinamiento.</li>
+      <li>Apoyo a la agricultura sostenible y local.</li>
+    </ul>
+    <p>Nos apasiona compartir nuestro conocimiento para que cada persona pueda criar gallinas felices y saludables, disfrutando de productos frescos y nutritivos.</p>
+  </section>
+
+  <section id="tipos">
+    <h2>Tipos de Gallinas</h2>
+    <div class="tipos">
+      <div class="tipo">
+        <h3>Leghorn</h3>
+        <p>Originaria de Italia, esta gallina blanca es ligera y sumamente activa. Es famosa por su capacidad para producir una gran cantidad de huevos blancos pequeños a medianos durante todo el año. Ideal para quienes buscan alta productividad.</p>
+        <p><strong>Características:</strong> Pico amarillo, patas amarillas, muy resistente a enfermedades.</p>
+      </div>
+      <div class="tipo">
+        <h3>Rhode Island Red</h3>
+        <p>Esta raza estadounidense es conocida por su plumaje rojo oscuro y su fuerza. Ponen huevos marrones grandes y tienen un temperamento tranquilo. Son robustas y se adaptan bien a distintos climas, incluso condiciones adversas.</p>
+        <p><strong>Características:</strong> Buena para carne y huevos, longevidad alta y fácil crianza.</p>
+      </div>
+      <div class="tipo">
+        <h3>Plymouth Rock</h3>
+        <p>Originaria de EE.UU., son gallinas calmadas, con plumaje rayado en blanco y negro. Son ponedoras confiables y producen huevos marrones medianos a grandes. Muy amigables, ideales para familias.</p>
+        <p><strong>Características:</strong> Buenas madres y resistentes al frío.</p>
+      </div>
+      <div class="tipo">
+        <h3>Sussex</h3>
+        <p>Raza inglesa, apreciada tanto para producción de huevos como de carne. Su plumaje puede ser blanco, marrón o moteado. Son conocidas por su carácter dócil y curiosidad.</p>
+        <p><strong>Características:</strong> Muy sociables y adaptables a diferentes entornos.</p>
+      </div>
+      <div class="tipo">
+        <h3>Brahma</h3>
+        <p>Gallina gigante originaria de Asia, famosa por sus patas emplumadas y temperamento calmado. Ponen huevos marrones y son muy resistentes al frío. Su tamaño grande los hace adecuados también para producción de carne.</p>
+        <p><strong>Características:</strong> Lenta en madurar, pero longeva y amigable.</p>
+      </div>
+      <div class="tipo">
+        <h3>Andaluza Azul</h3>
+        <p>Raza española con plumaje azul-grisáceo y producción regular de huevos blancos. Se adaptan bien a climas templados y son activas y elegantes.</p>
+        <p><strong>Características:</strong> Buen balance entre producción y belleza.</p>
+      </div>
+      <div class="tipo">
+        <h3>Araucana</h3>
+        <p>Gallina chilena muy valorada por poner huevos de cáscara azul verdosa. Son aves resistentes y curiosas, además de poseer un aspecto único con plumas en la cabeza tipo "barbas".</p>
+        <p><strong>Características:</strong> Buenas ponedoras, especiales para quienes buscan huevos diferentes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="productos">
+    <h2>Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3>Huevos Orgánicos</h3>
+        <p>Ofrecemos docenas de huevos frescos, libres de químicos y producidos por gallinas criadas en libertad. Cada huevo contiene nutrientes esenciales como vitaminas A, D y E, además de ácidos grasos Omega-3.</p>
+        <p><strong>Precio:</strong> $3.50 la docena.</p>
+      </div>
+      <div class="producto">
+        <h3>Gallinas Ponedoras</h3>
+        <p>Disponemos de gallinas jóvenes y saludables, listas para comenzar su ciclo de puesta. Criadas con alimentación natural y bajo supervisión veterinaria para garantizar la mejor calidad genética y de salud.</p>
+        <p><strong>Precio:</strong> $12 cada una.</p>
+      </div>
+      <div class="producto">
+        <h3>Alimento Natural</h3>
+        <p>Mezcla balanceada elaborada con granos seleccionados y suplementos naturales, que aseguran una nutrición completa para las gallinas, promoviendo su salud y una producción constante de huevos.</p>
+        <p><strong>Precio:</strong> Saco de 25 kg por $18.</p>
+      </div>
+      <div class="producto">
+        <h3>Gallineros Artesanales</h3>
+        <p>Gallineros fabricados con materiales sustentables, diseñados para proteger a las gallinas de depredadores y condiciones climáticas adversas, fomentando su bienestar y comodidad.</p>
+        <p><strong>Precio:</strong> Desde $75, personalizables según espacio.</p>
+      </div>
+      <div class="producto">
+        <h3>Suplementos Naturales</h3>
+        <p>Vitaminas y minerales 100% naturales para reforzar el sistema inmunológico de tus aves, prevenir enfermedades comunes y mejorar la calidad del huevo.</p>
+        <p><strong>Precio:</strong> $10 por paquete.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="curiosidades" class="subsection">
+    <h2>Curiosidades sobre las Gallinas</h2>
+    <ul>
+      <li>Las gallinas tienen un campo visual de casi 360 grados, lo que les permite detectar depredadores fácilmente.</li>
+      <li>Son capaces de reconocer hasta 100 rostros diferentes, tanto de gallinas como de humanos.</li>
+      <li>Las gallinas no solo ponen huevos blancos o marrones, ¡existen razas que ponen huevos azules, verdes o incluso rosados!</li>
+      <li>El canto del gallo es un acto territorial y de comunicación, no solo para anunciar la madrugada.</li>
+      <li>Las gallinas tienen un comportamiento social complejo, estableciendo jerarquías o “pico de gallina”.</li>
+      <li>La temperatura corporal de una gallina oscila entre 40 y 42 grados Celsius, superior a la humana.</li>
+      <li>Su sentido del oído es muy desarrollado; pueden distinguir sonidos a frecuencias que los humanos no perciben.</li>
+    </ul>
+  </section>
+
+  <section id="cuidados" class="subsection">
+    <h2>Cuidados para tus Gallinas</h2>
+    <p>Para criar gallinas saludables y felices, es fundamental brindarles un entorno adecuado y atender sus necesidades básicas:</p>
+    <ul>
+      <li><strong>Espacio suficiente:</strong> Cada gallina debe tener al menos 1 metro cuadrado para moverse libremente y evitar el estrés.</li>
+      <li><strong>Alimentación equilibrada:</strong> Proveerles un alimento variado con granos, proteínas, calcio y agua fresca siempre disponible.</li>
+      <li><strong>Limpieza del gallinero:</strong> Mantenerlo seco y limpio para prevenir enfermedades y proliferación de parásitos.</li>
+      <li><strong>Protección contra depredadores:</strong> Usar mallas y cerraduras seguras para protegerlas de zorros, gatos, aves rapaces y otros peligros.</li>
+      <li><strong>Estimulación y enriquecimiento:</strong> Proveer objetos para picotear, zonas para escarbar y perchas para que descansen.</li>
+      <li><strong>Revisión periódica:</strong> Observar su comportamiento y aspecto para detectar signos de enfermedad a tiempo.</li>
+    </ul>
+  </section>
+
+  <section id="salud" class="subsection">
+    <h2>Salud de las Gallinas</h2>
+    <p>Mantener la salud de las gallinas es vital para una producción sostenible y para su bienestar:</p>
+    <ul>
+      <li><strong>Vacunación:</strong> Asegúrate de vacunar contra enfermedades comunes como la enfermedad de Newcastle, bronquitis infecciosa y gripe aviar.</li>
+      <li><strong>Control de parásitos:</strong> Usa tratamientos antiparasitarios regulares para combatir ácaros, piojos y lombrices.</li>
+      <li><strong>Observa signos de enfermedad:</strong> Letargo, plumas erizadas, falta de apetito o cambios en la postura pueden indicar problemas.</li>
+      <li><strong>Consulta veterinaria:</strong> Ante cualquier duda o signo de enfermedad, busca ayuda profesional especializada en aves.</li>
+      <li><strong>Ambiente saludable:</strong> Ventilación adecuada, espacio limpio y evitar cambios bruscos de temperatura.</li>
+    </ul>
+  </section>
+
+  <section id="blog">
+    <h2>Blog de Consejos</h2>
+    <article>
+      <h3>¿Cómo construir un gallinero en casa?</h3>
+      <p>Te mostramos paso a paso cómo construir un gallinero seguro, cómodo y funcional con materiales accesibles. Es fundamental pensar en ventilación, protección contra depredadores y fácil acceso para la limpieza.</p>
+      <p>Además, incluir zonas de anidación y perchas eleva la calidad de vida de las gallinas.</p>
+    </article>
+    <article>
+      <h3>¿Qué comen las gallinas?</h3>
+      <p>Las gallinas necesitan una dieta balanceada que incluya granos (maíz, trigo), proteínas (gusanos, legumbres) y calcio (conchas molidas) para mantener la producción de huevos y la salud ósea.</p>
+      <p>También es recomendable ofrecer verduras frescas y frutas en cantidades moderadas.</p>
+    </article>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <p>Disfruta de este video educativo sobre gallinas y su cuidado:</p>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%;">
+      <iframe 
+        src="https://www.youtube.com/embed/maKLQYkJa04" 
+        frameborder="0" 
+        allowfullscreen 
+        style="position: absolute; top:0; left: 0; width: 100%; height: 100%;">
+      </iframe>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes preguntas, sugerencias o quieres hacer un pedido? Contáctanos a través del formulario o directamente por email. ¡Nos encanta saber de ti!</p>
+    <form>
+      <label for="nombre">Nombre:<br><input type="text" id="nombre" name="nombre" required></label><br>
+      <label for="email">Email:<br><input type="email" id="email" name="email" required></label><br>
+      <label for="mensaje">Mensaje:<br><textarea id="mensaje" name="mensaje" rows="4" required></textarea></label><br>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Granja de Gallinas Felices | Contacto: info@gallinasfelices.com</p>
+  </footer>
+
+</body>
+</html>
